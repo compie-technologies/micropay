@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - nightly
+
+matrix:
+    allow_failures:
+        - php: nightly
+
+before_script:
+  - travis_wait composer self-update
+  - travis_wait composer install --prefer-source --no-interaction
+
+script:
+  - vendor/bin/phpunit
+
+after_script:
+  - vendor/bin/test-reporter

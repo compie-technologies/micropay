@@ -1,0 +1,51 @@
+{
+  "name": "compie/micropay",
+  "description": "Laravel micropay sms package",
+  "type": "library",
+  "require": {
+    "laravel/framework": "^5.5",
+    "php": "^7.0",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "keywords": [
+        "laravel",
+        "micropay",
+        "sms",
+        "compie"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yohanan Baruchel",
+      "email": "ybaruchel@gmail.com"
+    },
+    {
+      "name": "Gabi Glazberg",
+      "email": "gglazberg@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Compie\\Micropay\\MicropayServiceProvider"
+      ],
+      "aliases": {
+        "Micropay": "Compie\\Micropay\\Facade\\Micropay"
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Compie\\Micropay\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Compie\\Micropay\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.3",
+    "orchestra/testbench": "~3.0"
+  }
+}
