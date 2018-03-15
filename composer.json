@@ -1,6 +1,6 @@
 {
   "name": "compie/micropay",
-  "description": "Laravel micropay sms package",
+  "description": "Laravel micropay sms gateway",
   "type": "library",
   "require": {
     "laravel/framework": "^5.5",
