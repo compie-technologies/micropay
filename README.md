@@ -1,2 +1,39 @@
-# Laravel Micropay Package
+# Laravel Micropay
 
+## Install
+
+To get the latest version of Laravel-Micropay on your project, require it from "composer":
+
+
+```composer require compie/micropay ```
+
+Then publish config file (**larabill.php**):
+
+```php artisan vendor:publish --tag=micropay```
+
+## Laravel 5.5+:
+If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
+
+```Compie\Micropay\MicropayServiceProvider::class,```
+
+If you want to use the facade to log messages, add this to your facades in app.php:
+
+```'Micropay' => \Compie\Micropay\Facade\Micropay::class,```
+
+## Basic Usage
+```php
+use Compie\Micropay\Facade\Micropay;
+
+// Prepare send
+$send = new \Compie\Micropay\Options\Send();
+$send->from = '050000000';
+$send->list = '054000000';
+$send->msg = 'Hello world';
+
+// Send error will throw exception
+try {
+    Micropay::send($send);
+} catch (SendException $e) {
+    $e->getMessage();
+}
+```
