@@ -1,5 +1,12 @@
 # Laravel Micropay - SMS Gateway
 
+<p align="center">
+<a href="https://travis-ci.org/compie/micropay"><img src="https://travis-ci.org/ybaruchel/micropay.svg?branch=master" alt="NPM"></a>
+<a href="https://packagist.org/packages/compie/micropay"><img src="https://poser.pugx.org/ybaruchel/micropay/version.png" alt="NPM"></a>
+<a href="https://packagist.org/packages/compie/micropay"><img src="https://poser.pugx.org/ybaruchel/micropay/d/total.png" alt="NPM"></a>
+<a href="http://choosealicense.com/licenses/mit/"><img src="https://poser.pugx.org/compie/micropay/license.png" alt="NPM"></a>
+</p>
+
 ## Install
 
 To get the latest version of Laravel-Micropay on your project, require it from "composer":

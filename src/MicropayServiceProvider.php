@@ -13,9 +13,9 @@ class MicropayServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/config/micropay.php' => config_path('micropay.php'),
-        ], 'micropay');
+		$this->publishes([
+			__DIR__.'/config/micropay.php' => config_path('micropay.php'),
+		], 'micropay');
 
 		$this->app->singleton('micropay', function () {
 			return new Micropay(config('micropay'));
