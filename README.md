@@ -44,3 +44,12 @@ try {
     $e->getMessage();
 }
 ```
+
+## Credits
+
+- [ybaruchel](https://github.com/ybaruchel)
+- [GabiGlazberg](https://github.com/GabiGlazberg)
+    - For the Micropay Client implementation
+
+## License
+The MIT License (MIT). Please see License File for more information.
