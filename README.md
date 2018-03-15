@@ -1,4 +1,4 @@
-# Laravel Micropay
+# Laravel Micropay - SMS Gateway
 
 ## Install
 
