@@ -14,7 +14,7 @@ To get the latest version of Laravel-Micropay on your project, require it from "
 
 ```composer require compie/micropay ```
 
-Then publish config file (**larabill.php**):
+Then publish config file (**micropay.php**):
 
 ```php artisan vendor:publish --tag=micropay```
 
