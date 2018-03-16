@@ -37,16 +37,16 @@ $send->from = '050000000';
 $send->list = '054000000';
 $send->msg = 'Hello world';
 
-// Send error will throw exception
+// Exception will be thrown when micropay returns error
 try {
     Micropay::send($send);
 } catch (SendException $e) {
+    // Micropay error message
     $e->getMessage();
 }
 ```
 
 ## Credits
-
 - [ybaruchel](https://github.com/ybaruchel)
 - [GabiGlazberg](https://github.com/GabiGlazberg)
     - For the Micropay Client implementation
