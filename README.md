@@ -18,7 +18,7 @@ Then publish config file (**micropay.php**):
 
 ```php artisan vendor:publish --tag=micropay```
 
-## Laravel 5.5+:
+## Service Provider & Facade:
 If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
 
 ```Compie\Micropay\MicropayServiceProvider::class,```
