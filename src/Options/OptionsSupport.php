@@ -1,6 +1,6 @@
 <?php
 
-namespace Compie\Micropay\Support;
+namespace Compie\Micropay\Options;
 
 class OptionsSupport
 {

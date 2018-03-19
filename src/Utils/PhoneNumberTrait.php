@@ -1,8 +1,8 @@
 <?php
 
-namespace Compie\Micropay\Traits;
+namespace Compie\Micropay\Utils;
 
-trait PhoneNumberUtils
+trait PhoneNumberTrait
 {
 	public function sanitizePhoneNumber($phoneNumber)
 	{

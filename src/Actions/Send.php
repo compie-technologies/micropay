@@ -4,17 +4,14 @@ namespace Compie\Micropay\Actions;
 
 use Compie\Micropay\Exceptions\SendException;
 use Compie\Micropay\Options\Send as SendOptions;
-use Compie\Micropay\Traits\Action;
-use Compie\Micropay\Traits\PhoneNumberUtils;
-use Compie\Micropay\Traits\ThirdPartyServices;
 
-class Send
+class Send extends Action
 {
-	use Action;
-	use PhoneNumberUtils;
-	use ThirdPartyServices;
-
+	/**
+	 * @var SendOptions
+	 */
 	private $sendOptions;
+
 	/**
 	 * @var array
 	 */
@@ -26,9 +23,9 @@ class Send
 		$this->config = $config;
 	}
 
-	public function handle()
+	public function handle(): bool
 	{
-		$options = $this->sendOptions->getOptions($this->config);
+		$options = array_filter($this->sendOptions->getOptions($this->config), [$this, 'filterArray']);
 
 		$options = $this->prepareOptions($options);
 
@@ -50,10 +47,16 @@ class Send
 		return true;
 	}
 
-	private function prepareOptions($options)
+	private function prepareOptions($options): array
 	{
+		// Sanitizing sender phone number
 		if (isset($options['from'])) {
 			$options['from'] = $this->sanitizePhoneNumber($options['from']);
+		}
+
+		// Sanitizing notifications phone number
+		if (isset($options['np'])) {
+			$options['np'] = $this->sanitizePhoneNumber($options['np']);
 		}
 
 		return $options;

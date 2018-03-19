@@ -7,9 +7,8 @@
  */
 return [
 	'uid' => env('MICROPAY_UID'),
-	'ne' => env('REPORTED_MAIL_MICROPAY'),
-	'su' => '1',
+	'su' => env('MICROPAY_SUB_USER', 0),
 	'un' => env('MICROPAY_USERNAME'),
 	'charset' => env('MICROPAY_CHARSET'),
-	'fromPhoneNumber' => env('FROM_PHONE_NUMBER'),
+	'from' => env('MICROPAY_FROM_PHONE_NUMBER'),
 ];
