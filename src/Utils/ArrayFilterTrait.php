@@ -4,8 +4,8 @@ namespace Compie\Micropay\Utils;
 
 trait ArrayFilterTrait
 {
-	public function filterArray(array $array)
+	public function filterArray($item)
 	{
-		return ($array !== NULL && $array !== FALSE && $array !== '');
+		return ($item !== NULL && $item !== FALSE && $item !== '');
 	}
 }
