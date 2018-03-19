@@ -59,11 +59,6 @@ class Send extends Action
 			$options['np'] = $this->sanitizePhoneNumber($options['np']);
 		}
 
-		// Encoding message before send
-		if (isset($options['msg'])) {
-			$options['msg'] = urlencode($options['msg']);
-		}
-
 		return $options;
 	}
 }
