@@ -14,7 +14,7 @@ class MicropayServiceProvider extends ServiceProvider
     public function boot()
     {
 		$this->publishes([
-			__DIR__.'../config/micropay.php' => config_path('micropay.php'),
+			__DIR__.'/../config/micropay.php' => config_path('micropay.php'),
 		], 'micropay');
 
 	$this->app->singleton('micropay', function () {
@@ -29,7 +29,7 @@ class MicropayServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'../config/micropay.php', 'micropay'
+            __DIR__.'/../config/micropay.php', 'micropay'
         );
     }
 }
