@@ -51,5 +51,11 @@ try {
 - [GabiGlazberg](https://github.com/GabiGlazberg)
     - For the Micropay Client implementation
 
+## Security Vulnerabilities
+
+If you discover a security vulnerability within this package, please send an e-mail to Compie Technologies at info@compie.co.il.  
+All security vulnerabilities will be promptly addressed.
+
 ## License
-The MIT License (MIT). Please see License File for more information.
+
+The Micropay package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
